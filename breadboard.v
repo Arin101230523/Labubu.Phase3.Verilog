@@ -88,9 +88,9 @@ module breadboard(clk, rst, A, opcode, C, error, status);
 
     // Status Bus Channels
     wire [63:0] s_channels; // 16 channels of 4-bit status codes
-    assign s_channels[3:0]   = 4'd0;
-    assign s_channels[7:4]   = 4'd0;
-    assign s_channels[11:8]  = stat2;
+    assign s_channels[3:0] = 4'd0;
+    assign s_channels[7:4] = 4'd0;
+    assign s_channels[11:8] = stat2;
     assign s_channels[15:12] = stat3;
     assign s_channels[19:16] = stat4;
     assign s_channels[23:20] = stat5;

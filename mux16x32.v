@@ -1,9 +1,9 @@
 module Mux16x32(channels, select, b);
     parameter k = 32;
 
-    input  [15:0]     select;
-    input  [16*k-1:0] channels;
-    output [k-1:0]    b;
+    input [15:0] select;
+    input [16*k-1:0] channels;
+    output [k-1:0] b;
 
     assign b =
         ({k{select[15]}} & channels[k*15 +: k]) |

@@ -1,11 +1,11 @@
 // Behaviorial Justification: We would need again a 32 stage subtraction gate architecture larger than the rest of program.
 module ThirtyTwoBitMod(inputA, inputB, result, err);
-    input  [31:0] inputA; // Dividend
-    input  [31:0] inputB; // Divisor
+    input [31:0] inputA; // Dividend
+    input [31:0] inputB; // Divisor
     output [31:0] result;
-    output        err;
-    reg    [31:0] result;
-    reg           err;
+    output err;
+    reg [31:0] result;
+    reg err;
 
     always @(*) begin
         // mod 0 check
