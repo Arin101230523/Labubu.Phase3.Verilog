@@ -51,10 +51,10 @@ module breadboard(clk, rst, A, opcode, C, error, status);
 
     // Multiplexer Channels
     wire [511:0] channels;
-    assign channels[31:0]    = nop_res; // 0000: STARE (NOP)
-    assign channels[63:32]   = rst_res; // 0001: SLEEP (RESET)
-    assign channels[95:64]   = sum_res; // 0010: SNACK (ADD)
-    assign channels[127:96]  = sub_res; // 0011: DRAIN (SUB)
+    assign channels[31:0] = nop_res; // 0000: STARE (NOP)
+    assign channels[63:32] = rst_res; // 0001: SLEEP (RESET)
+    assign channels[95:64] = sum_res; // 0010: SNACK (ADD)
+    assign channels[127:96] = sub_res; // 0011: DRAIN (SUB)
     assign channels[159:128] = div_res; // 0100: FART (DIV)
     assign channels[191:160] = mod_res; // 0101: POOP (MOD)
     assign channels[223:192] = mul_res; // 0110: SUGAR (MUL)
